@@ -1,17 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1>Gestión de Ítems</h1>
+    <ItemsList />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ItemsList from './components/ItemsList.vue';
+// Nota: Eliminamos la referencia a 'HelloWorld' ya que no se usa en el template final.
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // Componente necesario para mostrar la lista de ítems
+    ItemsList
   }
-}
+};
 </script>
 
 <style>
