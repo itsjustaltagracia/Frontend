@@ -2,8 +2,9 @@
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
-    "baseUrl": "./",
-    "moduleResolution": "node",
+    "baseUrl": "./", // Re-añadido para que el alias @/* funcione
+    "ignoreDeprecations": "6.0", // Incluido para silenciar advertencias como lo solicitaste
+    "moduleResolution": "node", // Corregido el valor estándar
     "paths": {
       "@/*": [
         "src/*"
@@ -15,5 +16,13 @@
       "dom.iterable",
       "scripthost"
     ]
-  }
+  },
+  "include": [
+    "src/**/*.js",   // Para proyectos JavaScript
+    "src/**/*.jsx",
+    "src/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules" // Asegura que la compilación sea rápida
+  ]
 }
